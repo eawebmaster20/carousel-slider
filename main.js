@@ -75,3 +75,16 @@ const deleteImg = (el)=>{
     document.getElementById('thumbnails').innerHTML = populateThumbnails();
     addThumbnailEventLst();
 }
+
+const populateThumbnails=()=> {
+    let result = ''
+    for (let i = 0; i < imgList.length; i++) {
+        result = result + `
+        <span id=${i} class="thumbnail-item">
+        <i class="btn-delete-thumbnail" onClick ="deleteImg(this)"><img class="btn-icon" src="./Image/delete.svg" alt="" srcset=""></i>
+            <img class="thumbnail-image" src="${imgList[i]}" alt="" srcset="">
+        </span>
+        `
+    }
+    return result;
+}
