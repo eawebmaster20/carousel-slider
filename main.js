@@ -119,3 +119,19 @@ const addSwipeEvent = ()=>{
         return
     })
 }
+
+document.getElementById('showDialog').addEventListener("click", () => {
+    document.querySelector("dialog").showModal();
+  });
+document.getElementById('urlDialog').addEventListener("click", () => {
+    let urlString = document.getElementById('url').value;
+    document.getElementById('url').value = '';
+    console.log(urlString);
+    console.log(urlString.match(/^https?:\/\/(www.)?(\w+\.)?[A-z]+.[A-z]{2,8}\/\w+/));
+    if (urlString.match(/^https?:\/\/(www.)?(\w+\.)?[A-z]+.[A-z]{2,8}\/\w+/)) {
+        addNewImgUrl(urlString)
+    }
+});
+document.getElementById('thumbnails').innerHTML = populateThumbnails()
+
+addThumbnailEventLst()
