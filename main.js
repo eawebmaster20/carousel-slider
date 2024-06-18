@@ -26,3 +26,31 @@ function showImg (imgIndex){
 
 addSwipeEvent();
 }
+
+const prevCarousel = ()=>{
+    currentIndex = +currentIndex - 1;
+    if (currentIndex < 0) {
+        currentIndex = +currentIndex + 1;
+        document.getElementById('prev').classList.add('d-none');
+        return;
+    }
+    document.getElementById('prev').classList.remove('d-none');
+    document.getElementById('imgListContainer').remove()
+    showImg(currentIndex);
+    addSwipeEvent()
+}
+
+const nextCarousel= ()=>{
+    currentIndex = +currentIndex + 1;
+    if (currentIndex > imgList.length-1) {
+        currentIndex = +currentIndex - 1;
+        console.log('prev');
+        document.getElementById('prev').classList.add('d-none');
+        return;
+    }
+    document.getElementById('prev').classList.remove('d-none');
+    document.getElementById('imgListContainer').remove();
+    showImg(currentIndex);
+    addSwipeEvent()
+    // 
+}
