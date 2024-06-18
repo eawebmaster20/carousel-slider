@@ -54,3 +54,10 @@ const nextCarousel= ()=>{
     addSwipeEvent()
     // 
 }
+
+const closeCarousel = ()=>{
+    console.log('closed');
+    document.getElementById('carousel').classList.add('d-none');
+    document.getElementById('thumbnails').classList.remove('d-none');
+    document.getElementById('showDialog').classList.remove('d-none');
+}
