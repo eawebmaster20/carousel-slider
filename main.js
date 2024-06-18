@@ -61,3 +61,17 @@ const closeCarousel = ()=>{
     document.getElementById('thumbnails').classList.remove('d-none');
     document.getElementById('showDialog').classList.remove('d-none');
 }
+
+const addNewImgUrl = (url)=>{
+    imgList.push(url);
+    document.getElementById('thumbnails').innerHTML = populateThumbnails();
+    addThumbnailEventLst();
+}
+
+const deleteImg = (el)=>{
+    let index = el.parentNode.id;
+    imgList.splice(index, 1);
+    console.log(index, imgList);
+    document.getElementById('thumbnails').innerHTML = populateThumbnails();
+    addThumbnailEventLst();
+}
