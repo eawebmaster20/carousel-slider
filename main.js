@@ -88,3 +88,18 @@ const populateThumbnails=()=> {
     }
     return result;
 }
+
+const addThumbnailEventLst= ()=>{
+    let thumbnailELs = document.getElementsByClassName('thumbnail-image');
+    for (let i = 0; i < thumbnailELs.length; i++) {
+        thumbnailELs[i].addEventListener('click', (el)=>{
+            document.getElementById('carousel').classList.remove('d-none');
+            document.getElementById('thumbnails').classList.add('d-none');
+            document.getElementById('showDialog').classList.add('d-none');
+            currentIndex = el.target.parentNode.id
+            console.log(imgList[currentIndex],currentIndex, imgList);
+            showImg(el.target.parentNode.id);
+            addSwipeEvent();
+        })
+    }
+}
