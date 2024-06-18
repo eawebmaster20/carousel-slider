@@ -2,10 +2,10 @@ let currentIndex=0;
 let swipedFrom = 0
 let swipedTo = 0
 let imgList = [
-    "/Image/img1.jpg","Image/img1_a.jpg",
-    "/Image/img2.jpg","Image/img2_b.jpg",
+    "/Image/img1.jpg",
+    "/Image/img2.jpg",
     "/Image/img3.jpg","Image/img3_c.jpg",
-    "/Image/img4.jpg","Image/img4_d.jpg",
+    "/Image/img4.jpg","Image/img5.jpg",
 ]
 
 function showImg (imgIndex){
