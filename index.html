@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carousel Slider</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="carousel" class="carousel d-none">
+        <div onclick="closeCarousel()" class="closeLightbox">
+            <span id="close" >x</span>
+        </div>
+        <div class="arrows">
+            <button onclick="prevCarousel()" id="prev"><</button>
+            <button onclick="nextCarousel()" id="next">></button>
+        </div>
+    </div>
+    <div id="menuBar" class="menu-bar">
+        <button id="showDialog">add new image</button>
+        <dialog>
+            <p>Greetings, one and all!</p>
+            <form method="dialog">
+                <input placeholder="enter your img url" type="text" id="url" class="img-url">
+              <button id="urlDialog">OK</button>
+            </form>
+          </dialog>
+    </div>
+    <div  id="thumbnails" class="thumbnails"></div>
+    <script src="app.js"></script>
 </body>
 </html>
