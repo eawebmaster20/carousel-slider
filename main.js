@@ -103,3 +103,19 @@ const addThumbnailEventLst= ()=>{
         })
     }
 }
+
+const addSwipeEvent = ()=>{
+    document.getElementById('imgContainer').addEventListener('touchstart', e => {
+        swipedFrom = e.changedTouches[0].screenX
+    });
+
+    document.getElementById('imgContainer').addEventListener('touchend', e => {
+        swipedTo = e.changedTouches[0].screenX
+        if (swipedFrom > swipedTo) {
+            nextCarousel();
+            return;
+        }
+        prevCarousel;
+        return
+    })
+}
